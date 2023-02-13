@@ -1,1 +1,30 @@
-Please Read Me
+# Basketball Court Finder
+---
+
+## Overview
+---
+For all those would-be ballers out there, this app finds basketball courts in your area and provides you with a wealth of relevant information about the court (surface, number of hoops, hours available, etc.) as well as view other users reviews of the court.
+
+---
+## User Stories
+---
+As a user, I would like to be able to:
+- Create an Account
+- Login/logout of my account
+- Retrieve forgotten password/email
+- Search for basketball court (rim, surface, lights, number of hoops)
+- View details about the basketball court
+- filter basketball by certain characteristic
+- add details about the basketball court (update), when logged in
+- rate and review courts (post reviews), when logged in
+- add new basketball court
+- Report court as closed
+- Token Authentication
+
+### Stretch Goals
+- Add friends
+- Share my location with friends
+- Find court that is the optimal distance from multiple locations
+
+
+
