@@ -65,7 +65,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(requestLogger)
 
 // register route files
-app.use(exampleRoutes)
+app.use(courtRoutes)
 app.use(userRoutes)
 
 // register error handling middleware
