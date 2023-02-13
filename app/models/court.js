@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const commentSchema = require('./review')
+const reviewSchema = require('./review')
 
 const courtSchema = new mongoose.Schema(
 	{
@@ -8,6 +8,7 @@ const courtSchema = new mongoose.Schema(
 			required: true
 		},
 		location: {
+			type: String,
 			required: true
 		},
 		rating: {
@@ -17,7 +18,7 @@ const courtSchema = new mongoose.Schema(
 			type: []
 		},
 		review: {
-			type: [commentSchema]
+			type: [reviewSchema]
 		},
 		nets: {
 			type: Boolean
@@ -48,12 +49,11 @@ const courtSchema = new mongoose.Schema(
 			required: true
 		},
 		typeOfRims: {
-			type: NUmber
+			type: Number
 		},
 		owner: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: 'User',
-			required: true,
 		},
 	},
 	{
