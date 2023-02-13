@@ -34,6 +34,21 @@ router.get('/courts/:id', (req, res, next) => {
 		// if an error occurs, pass it to the handler
 		.catch(next)
 })
+/////////// SHOW courts by search /////////////
+router.get('/courts/:field/:value', (req, res, next) => {
+	const field = req.params.field
+	console.log('this is field', field)
+	const value = req.params.value
+	console.log('this is value', value)
+	// const example = {}
+	// req.params.id will be set based on the `:id` in the route
+	Court.find(`${field}: ${value}`)
+		.then(handle404)
+		// if `findById` is succesful, respond with 200 and "court" JSON
+		.then((court) => res.status(200).json({ court: court.toObject() }))
+		// if an error occurs, pass it to the handler
+		.catch(next)
+})
 
 // CREATE
 // POST /courts
