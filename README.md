@@ -24,7 +24,52 @@ As a user, I would like to be able to:
 ### Stretch Goals
 - Add friends
 - Share my location with friends
-- Find court that is the optimal distance from multiple locations
+- Find acourt that is the optimal distance from multiple locations
+- Use current location data
+---
+## Wireframes
+---
+![Home Screen](wireframe/home.PNG)
 
+---
+![Nearby Courts (Index)](wireframe/near-by-court.PNG)
 
+---
+![Court details (Show)](wireframe/court-details.PNG)
 
+---
+![Add court](wireframe/create-court.PNG)
+
+---
+
+## ERDs
+---
+
+---
+
+## Route Tables
+---
+
+| Verb   | URI Pattern            | Controller#Action |
+|--------|------------------------|-------------------|
+| GET   | `/court`             | `courts#index`    |
+| GET   | `/court/:id`             | `courts#show`    |
+| POST   | `/court`             | `courts#create`    |
+| PATCH  | `/court/:id` | `courts#update`  |
+
+### Users
+
+| Verb   | URI Pattern            | Controller#Action |
+|--------|------------------------|-------------------|
+| POST   | `/sign-up`             | `users#signup`    |
+| POST   | `/sign-in`             | `users#signin`    |
+| PATCH  | `/change-password/` | `users#changepw`  |
+| DELETE | `/sign-out/`        | `users#signout`   |
+
+### Reviews
+
+| Verb   | URI Pattern            | Controller#Action |
+|--------|------------------------|-------------------|
+| POST   | `/reviews/:courtId`             | `reviews#create`    |
+| PATCH  | `/reviews/:courtId/:reviewId` | `reviews#update`  |
+| DELETE | `/reviews/:courtId/:reviewId`        | `reviews#delete`   |
