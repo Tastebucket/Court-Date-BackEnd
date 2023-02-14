@@ -11,10 +11,11 @@ const requireToken = passport.authenticate('bearer', { session: false })
 const router = express.Router()
 
 // Post
-router.post('/review/:courtId', requireToken, (req, res, next) => {
+router.post('/reviews/:courtId', requireToken, (req, res, next) => {
 	const courtId = req.params.courtId
     const review = req.body.review
     // const owner = req.body.
+	console.log('this is user', req.user)
     req.body.review.owner = req.user.id
     console.log ("req user log", req.user.id)
     Court.findById(courtId)
@@ -29,7 +30,7 @@ router.post('/review/:courtId', requireToken, (req, res, next) => {
 })
 
 // Patch
-router.patch('/review/:courtId/:reviewId', requireToken, removeBlanks, (req, res, next) => {
+router.patch('/reviews/:courtId/:reviewId', requireToken, removeBlanks, (req, res, next) => {
 	// delete req.body.court.owner
     const review = req.body.review
     const courtId = req.params.courtId
@@ -55,7 +56,7 @@ router.patch('/review/:courtId/:reviewId', requireToken, removeBlanks, (req, res
 })
 
 // Delete
-router.delete('/review/:courtId/:reviewId', requireToken, (req, res, next) => {
+router.delete('/reviews/:courtId/:reviewId', requireToken, (req, res, next) => {
 	// delete req.body.court.owner
     const courtId = req.params.courtId
     const reviewId = req.params.reviewId
