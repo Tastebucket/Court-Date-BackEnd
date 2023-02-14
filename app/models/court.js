@@ -17,9 +17,6 @@ const courtSchema = new mongoose.Schema(
 		picture: {
 			type: []
 		},
-		review: {
-			type: [reviewSchema]
-		},
 		nets: {
 			type: Boolean
 		},
@@ -51,11 +48,12 @@ const courtSchema = new mongoose.Schema(
 		typeOfRims: {
 			type: Number
 		},
+		review: [reviewSchema],
 		owner: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: 'User',
 		},
-	}, [reviewSchema],
+	},
 	{
 		timestamps: true,
 	}
