@@ -1,13 +1,14 @@
 {
   "name": "court-date",
   "version": "1.0.0",
-  "description": "a neat app for finding nearby basketball courts",
+  "description": "Map based application which locates multiple local basketball courts to users",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "nodemon app/models/seed.js"
   },
-  "author": "Huy Tran, Joshua Harris, Elijah Penny",
+  "author": "The EastCoastConnection",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
