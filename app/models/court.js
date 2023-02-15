@@ -30,7 +30,7 @@ const courtSchema = new mongoose.Schema(
 			type: Number
 		},
 		hours: {
-			type: Number
+			type: String
 		},
 		surface: {
 			type: String,
@@ -46,7 +46,9 @@ const courtSchema = new mongoose.Schema(
 			required: true
 		},
 		typeOfRims: {
-			type: Number
+			type: String,
+			enum: ['single', 'double'],
+			default: 'single'
 		},
 		review: [reviewSchema],
 		owner: {
