@@ -105,4 +105,6 @@ router.delete('/courts/:id', requireToken, (req, res, next) => {
 		.catch(next)
 })
 
+
+
 module.exports = router
