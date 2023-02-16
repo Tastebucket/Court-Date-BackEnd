@@ -71,14 +71,14 @@ router.patch('/courts/:id', requireToken, removeBlanks, (req, res, next) => {
 	// if the client attempts to change the `owner` property by including a new
 	// owner, prevent that by deleting that key/value pair
 	delete req.body.court.owner
-
+	console.log(req.body.court)
 	Court.findById(req.params.id)
 		.then(handle404)
 		.then((court) => {
 			// pass the `req` object and the Mongoose record to `requireOwnership`
 			// it will throw an error if the current user isn't the owner
-			requireOwnership(req, court)
-
+			// requireOwnership(req, court)
+			console.log(req.body.court)
 			// pass the result of Mongoose's `.update` to the next `.then`
 			return court.updateOne(req.body.court)
 		})
