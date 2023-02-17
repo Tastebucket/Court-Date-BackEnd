@@ -21,7 +21,7 @@ const courtSchema = new mongoose.Schema(
 			type: [Number]
 		},
 		picture: {
-			type: []
+			type: [String]
 		},
 		nets: {
 			type: Boolean
