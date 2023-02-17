@@ -11,11 +11,17 @@ const courtSchema = new mongoose.Schema(
 			type: String,
 			required: true
 		},
+		latitude: {
+			type: Number,
+		},
+		longitude: {
+			type: Number,
+		},
 		rating: {
 			type: [Number]
 		},
 		picture: {
-			type: []
+			type: [String]
 		},
 		nets: {
 			type: Boolean
