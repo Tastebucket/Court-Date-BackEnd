@@ -9,10 +9,10 @@ const Court = require('./court')
 const db = require('../../config/db')
 
 const startCourts = [
-    {name: 'ABC', location: '47 CoolTown St', numberOfHoops: 4, numberOfCourts: 2,},    
-    {name: 'DEF', location: '29 Ballercentral Ave', numberOfHoops: 2, numberOfCourts: 1,},
-    {name: 'GHI', location: '1 Penn Road', numberOfHoops: 12, numberOfCourts: 6,},
-    {name: 'JKL', location: 'Alley Lane', numberOfHoops: 1, numberOfCourts: 1,}    
+    {name: 'ABC', location: '47 CoolTown St', longitude: -72, latitude: 46, numberOfHoops: 4, numberOfCourts: 2,},    
+    {name: 'DEF', location: '29 Ballercentral Ave', longitude: -74, latitude: 43, numberOfHoops: 2, numberOfCourts: 1,},
+    {name: 'GHI', location: '1 Penn Road', longitude: -71, latitude: 44, numberOfHoops: 12, numberOfCourts: 6,},
+    {name: 'JKL', location: 'Alley Lane', longitude: -71.5, latitude: 45.6, numberOfHoops: 1, numberOfCourts: 1,}    
 ]
 
 // first we connect to the db
