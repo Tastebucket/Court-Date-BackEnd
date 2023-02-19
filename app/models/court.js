@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const reviewSchema = require('./review')
+const ratingSchema = require('./rating')
 
 const courtSchema = new mongoose.Schema(
 	{
@@ -16,9 +17,6 @@ const courtSchema = new mongoose.Schema(
 		},
 		longitude: {
 			type: Number,
-		},
-		rating: {
-			type: [Number]
 		},
 		picture: {
 			type: [String]
@@ -57,6 +55,7 @@ const courtSchema = new mongoose.Schema(
 			default: 'single'
 		},
 		review: [reviewSchema],
+		rating: [ratingSchema],
 		owner: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: 'User',

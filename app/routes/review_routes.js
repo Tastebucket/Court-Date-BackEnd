@@ -14,6 +14,10 @@ const router = express.Router()
 router.post('/reviews/:courtId', requireToken, (req, res, next) => {
 	const courtId = req.params.courtId
     const review = req.body.review
+	const rating = req.body.rating
+	// review.owner = req.user.id
+  	// review.rating = req.body.rating
+	console.log('this is the rating', req.body)
     // const owner = req.body.
 	console.log('this is user', req.user)
     req.body.review.owner = req.user.id
@@ -22,7 +26,9 @@ router.post('/reviews/:courtId', requireToken, (req, res, next) => {
 		// respond to succesful `create` with status 201 and JSON of new "court"
 		.then((court) => {
 			court.review.push(review)
-            console.log ('this review is being posted', review)
+			court.review.push(rating)
+			
+			console.log ('this review is being posted', review)
             res.status(201).json({ court: court.toObject() })
             return court.save()
 		})
