@@ -77,7 +77,6 @@ router.patch('/courts/:id', requireToken, removeBlanks, (req, res, next) => {
 		.then((court) => {
 			// pass the `req` object and the Mongoose record to `requireOwnership`
 			// it will throw an error if the current user isn't the owner
-			requireOwnership(req, court)
 
 			// pass the result of Mongoose's `.update` to the next `.then`
 			return court.updateOne(req.body.court)

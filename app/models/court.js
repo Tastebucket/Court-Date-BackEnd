@@ -59,7 +59,7 @@ const courtSchema = new mongoose.Schema(
 		review: [reviewSchema],
 		owner: {
 			type: mongoose.Schema.Types.ObjectId,
-			ref: 'User',
+			ref: 'User'
 		},
 	},
 	{
