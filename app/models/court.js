@@ -18,7 +18,9 @@ const courtSchema = new mongoose.Schema(
 		longitude: {
 			type: Number,
 		},
+
 		rating: [ratingSchema],
+
 		picture: {
 			type: [String]
 		},
@@ -56,6 +58,7 @@ const courtSchema = new mongoose.Schema(
 			default: 'single'
 		},
 		review: [reviewSchema],
+		rating: [ratingSchema],
 		owner: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: 'User',

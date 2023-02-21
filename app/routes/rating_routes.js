@@ -1,3 +1,4 @@
+
 const express = require('express')
 const passport = require('passport')
 const Court = require('../models/court')
@@ -57,3 +58,4 @@ router.patch('/ratings/:courtId/:ratingId', requireToken, removeBlanks, (req, re
 })
 
 module.exports = router
+

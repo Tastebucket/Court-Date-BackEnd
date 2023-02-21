@@ -1,3 +1,4 @@
+
 const { Timestamp } = require('mongodb')
 const mongoose = require('mongoose')
 
@@ -16,3 +17,4 @@ const ratingSchema = new mongoose.Schema(
 )
 
 module.exports = ratingSchema
+
