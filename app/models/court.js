@@ -18,9 +18,6 @@ const courtSchema = new mongoose.Schema(
 		longitude: {
 			type: Number,
 		},
-
-		rating: [ratingSchema],
-
 		picture: {
 			type: [String]
 		},
