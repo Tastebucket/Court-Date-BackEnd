@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const reviewSchema = require('./review')
+const ratingSchema = require('./rating')
 
 const courtSchema = new mongoose.Schema(
 	{
@@ -17,9 +18,7 @@ const courtSchema = new mongoose.Schema(
 		longitude: {
 			type: Number,
 		},
-		rating: {
-			type: [Number]
-		},
+		rating: [ratingSchema],
 		picture: {
 			type: [String]
 		},
